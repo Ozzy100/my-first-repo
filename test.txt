@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar Website</title>
+	<!-- Add the Bootstrap stylesheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- Add the FullCalendar stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+	<style type="text/css">
+		/* Add styles for the buttons */
+		.button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		
+		/* Add styles for the button container */
+		.button-container {
+			float: right;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<!-- Add the button container -->
+	<div class="button-container">
+		<button class="button">Home</button>
+		<button class="button">Planner</button>
+		<button class="button">About</button>
+		<button class="button">Contact</button>
+	</div>
+
+    <!-- Add the calendar container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Calendar</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the calendar table -->
+    <div class="container">
+        <div id='calendar'></div>
+    </div>
+
+    <!-- Add the Bootstrap JavaScript library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Add the jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Add the FullCalendar library -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
+
+    <!-- Initialize FullCalendar -->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                events:[
+                    {
+                        title:'Event 1',
+                        start:'2023-03-01T12:30:00',
+                        end:'2023-03-01T14:30:00'
+                    },
+                    {
+                        title:'Event 2',
+                        start:'2023-03-05T09:00:00',
+                        end:'2023-03-05T11:00:00'
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+</html>
